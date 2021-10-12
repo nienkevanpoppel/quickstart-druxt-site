@@ -1,8 +1,9 @@
 import opn from 'opn'
+import { defineNuxtConfig } from '@nuxt/bridge'
 
 const baseUrl = process.env.BASE_URL
 
-export default {
+export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'quickstart-druxt-site',
@@ -57,4 +58,4 @@ export default {
     // Open browser once build is done.
     'build:done': () => opn('https://localhost:3000')
   }
-}
+})
